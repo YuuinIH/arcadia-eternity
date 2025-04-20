@@ -15,6 +15,8 @@ RUN pnpm install --frozen-lockfile --force
 
 COPY . .
 
+RUN ls .
+
 RUN pnpm build
 
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
